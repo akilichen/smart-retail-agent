@@ -1,0 +1,273 @@
+{
+  "metadata": {
+    "description": "商品搭配推荐规则，用于组合推荐模块，提升客单价",
+    "last_updated": "2026-08-28"
+  },
+  "rules": [
+    {
+      "rule_id": "B001",
+      "trigger_category": "酸奶",
+      "trigger_keywords": ["酸奶", "发酵乳", "风味发酵乳"],
+      "trigger_products": ["DAIRY001", "DAIRY002", "DAIRY003"],
+      "recommendations": [
+        {
+          "product_id": "SNACK001",
+          "reason": "酸奶+燕麦是经典早餐搭配，营养均衡又方便",
+          "match_score": 0.95
+        },
+        {
+          "product_id": "SNACK002",
+          "reason": "酸奶拌烘焙麦片，口感酥脆酸甜，大人小孩都爱",
+          "match_score": 0.90
+        },
+        {
+          "product_id": "FRUIT005",
+          "reason": "草莓搭配酸奶做水果捞，颜值和口感双满分",
+          "match_score": 0.88
+        },
+        {
+          "product_id": "SNACK004",
+          "reason": "酸奶拌每日坚果，补充蛋白质和好脂肪",
+          "match_score": 0.85
+        },
+        {
+          "product_id": "SNACK007",
+          "reason": "蔓越莓干拌酸奶，酸甜可口颜值高",
+          "match_score": 0.80
+        }
+      ]
+    },
+    {
+      "rule_id": "B002",
+      "trigger_category": "纯牛奶",
+      "trigger_keywords": ["纯牛奶", "鲜牛奶", "有机奶"],
+      "trigger_products": ["DAIRY004", "DAIRY005", "DAIRY006"],
+      "recommendations": [
+        {
+          "product_id": "SNACK001",
+          "reason": "牛奶泡燕麦，5分钟搞定营养早餐",
+          "match_score": 0.95
+        },
+        {
+          "product_id": "BAKERY001",
+          "reason": "牛奶配面包，经典早餐组合",
+          "match_score": 0.92
+        },
+        {
+          "product_id": "BAKERY003",
+          "reason": "可颂蘸牛奶，法式早餐的享受",
+          "match_score": 0.85
+        },
+        {
+          "product_id": "SNACK003",
+          "reason": "玉米片泡牛奶，经典西式早餐",
+          "match_score": 0.88
+        }
+      ]
+    },
+    {
+      "rule_id": "B003",
+      "trigger_category": "火锅底料",
+      "trigger_keywords": ["火锅底料", "锅底", "火锅"],
+      "trigger_products": ["COND001", "COND002", "COND003"],
+      "recommendations": [
+        {
+          "product_id": "MEAT001",
+          "reason": "吃火锅怎能没有肥牛卷，涮8秒就能吃",
+          "match_score": 0.98
+        },
+        {
+          "product_id": "MEAT002",
+          "reason": "羊肉卷是火锅标配，鲜嫩无膻味",
+          "match_score": 0.95
+        },
+        {
+          "product_id": "MEAT004",
+          "reason": "虾滑Q弹鲜美，火锅必备食材",
+          "match_score": 0.93
+        },
+        {
+          "product_id": "VEG002",
+          "reason": "金针菇是火锅灵魂配菜，爽滑入味",
+          "match_score": 0.92
+        },
+        {
+          "product_id": "VEG001",
+          "reason": "娃娃菜涮火锅清甜解腻",
+          "match_score": 0.88
+        },
+        {
+          "product_id": "VEG003",
+          "reason": "嫩豆腐涮火锅吸满汤汁，丝滑入味",
+          "match_score": 0.87
+        },
+        {
+          "product_id": "BEV003",
+          "reason": "吃辣火锅配气泡水解辣爽口",
+          "match_score": 0.80
+        }
+      ]
+    },
+    {
+      "rule_id": "B004",
+      "trigger_category": "碳酸饮料",
+      "trigger_keywords": ["可乐", "碳酸饮料", "雪碧", "汽水"],
+      "trigger_products": ["BEV001", "BEV002"],
+      "recommendations": [
+        {
+          "product_id": "SNACK008",
+          "reason": "可乐配薯片，追剧看球经典搭档",
+          "match_score": 0.95
+        },
+        {
+          "product_id": "SNACK009",
+          "reason": "黄瓜味薯片配可乐，清爽解腻",
+          "match_score": 0.90
+        },
+        {
+          "product_id": "SNACK010",
+          "reason": "奥利奥泡可乐，解锁隐藏吃法",
+          "match_score": 0.75
+        },
+        {
+          "product_id": "WINE001",
+          "reason": "啤酒+可乐调一杯'自由古巴'，聚会必备",
+          "match_score": 0.70
+        }
+      ]
+    },
+    {
+      "rule_id": "B005",
+      "trigger_category": "面包",
+      "trigger_keywords": ["面包", "吐司", "可颂", "烘焙"],
+      "trigger_products": ["BAKERY001", "BAKERY002", "BAKERY003"],
+      "recommendations": [
+        {
+          "product_id": "DAIRY004",
+          "reason": "面包配牛奶，最经典的早餐搭配",
+          "match_score": 0.95
+        },
+        {
+          "product_id": "DAIRY005",
+          "reason": "有机牛奶配全麦面包，健康早餐升级",
+          "match_score": 0.92
+        },
+        {
+          "product_id": "BEV004",
+          "reason": "面包配无糖茶，清爽不腻的早餐选择",
+          "match_score": 0.80
+        }
+      ]
+    },
+    {
+      "rule_id": "B006",
+      "trigger_category": "方便面",
+      "trigger_keywords": ["方便面", "泡面", "杯面", "速食面"],
+      "trigger_products": ["INST001", "INST002"],
+      "recommendations": [
+        {
+          "product_id": "SNACK010",
+          "reason": "泡面配饼干，深夜加班的能量补给站",
+          "match_score": 0.80
+        },
+        {
+          "product_id": "BEV007",
+          "reason": "泡面配红牛，熬夜赶工必备组合",
+          "match_score": 0.78
+        },
+        {
+          "product_id": "MEAT003",
+          "reason": "煮面时加几只虾，泡面秒变海鲜面",
+          "match_score": 0.75
+        }
+      ]
+    },
+    {
+      "rule_id": "B007",
+      "trigger_category": "啤酒",
+      "trigger_keywords": ["啤酒", "精酿", "拉格"],
+      "trigger_products": ["WINE001"],
+      "recommendations": [
+        {
+          "product_id": "SNACK008",
+          "reason": "啤酒配薯片，看球赛的经典搭档",
+          "match_score": 0.92
+        },
+        {
+          "product_id": "MEAT001",
+          "reason": "啤酒配肥牛烧烤，夏日聚会标配",
+          "match_score": 0.88
+        },
+        {
+          "product_id": "MEAT003",
+          "reason": "啤酒配白灼虾，海鲜大排档风味",
+          "match_score": 0.85
+        }
+      ]
+    },
+    {
+      "rule_id": "B008",
+      "trigger_category": "茶饮料",
+      "trigger_keywords": ["茶饮料", "无糖茶", "东方树叶", "柠檬茶"],
+      "trigger_products": ["BEV004", "BEV005", "BEV006"],
+      "recommendations": [
+        {
+          "product_id": "SNACK004",
+          "reason": "无糖茶配坚果，办公室健康下午茶",
+          "match_score": 0.88
+        },
+        {
+          "product_id": "BAKERY002",
+          "reason": "全麦面包配无糖茶，减脂期的完美早餐",
+          "match_score": 0.82
+        },
+        {
+          "product_id": "SNACK006",
+          "reason": "芒果干配茶，酸甜解馋不腻口",
+          "match_score": 0.78
+        }
+      ]
+    },
+    {
+      "rule_id": "B009",
+      "trigger_category": "宠物食品",
+      "trigger_keywords": ["猫粮", "犬粮", "宠物食品", "猫湿粮"],
+      "trigger_products": ["PET001", "PET002", "PET003"],
+      "recommendations": [
+        {
+          "product_id": "PET002",
+          "reason": "干粮搭配湿粮，营养更均衡，猫咪也更爱吃",
+          "match_score": 0.92
+        },
+        {
+          "product_id": "PET001",
+          "reason": "湿粮搭配干粮，日常喂养的黄金组合",
+          "match_score": 0.90
+        }
+      ]
+    },
+    {
+      "rule_id": "B010",
+      "trigger_category": "水果",
+      "trigger_keywords": ["水果", "草莓", "苹果", "车厘子", "葡萄"],
+      "trigger_products": ["FRUIT001", "FRUIT002", "FRUIT003", "FRUIT004", "FRUIT005"],
+      "recommendations": [
+        {
+          "product_id": "DAIRY001",
+          "reason": "水果搭配酸奶做水果捞，健康又美味",
+          "match_score": 0.90
+        },
+        {
+          "product_id": "DAIRY003",
+          "reason": "零添加酸奶配新鲜水果，纯净又营养",
+          "match_score": 0.88
+        },
+        {
+          "product_id": "SNACK001",
+          "reason": "水果+燕麦+酸奶，自制Acai Bowl风格的早餐碗",
+          "match_score": 0.82
+        }
+      ]
+    }
+  ]
+}

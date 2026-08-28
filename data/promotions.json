@@ -1,0 +1,150 @@
+{
+  "metadata": {
+    "store_id": "SZ-NANSHAN-001",
+    "valid_from": "2026-08-25",
+    "valid_to": "2026-08-31",
+    "note": "所有促销信息均为模拟数据，仅供演示"
+  },
+  "promotions": [
+    {
+      "promo_id": "P001",
+      "type": "满减",
+      "title": "乳制品满60减10",
+      "description": "购买乳制品品类商品，单笔订单满60元立减10元",
+      "conditions": {
+        "category": "乳制品",
+        "min_amount": 60,
+        "discount": 10
+      },
+      "applicable_products": ["DAIRY001", "DAIRY002", "DAIRY003", "DAIRY004", "DAIRY005", "DAIRY006"],
+      "stackable": true,
+      "priority": 1
+    },
+    {
+      "promo_id": "P002",
+      "type": "折扣",
+      "title": "饮料品类85折",
+      "description": "饮料品类全场85折，无门槛",
+      "conditions": {
+        "category": "饮料",
+        "discount_rate": 0.85
+      },
+      "applicable_products": ["BEV001", "BEV002", "BEV003", "BEV004", "BEV005", "BEV006", "BEV007", "BEV008"],
+      "stackable": false,
+      "priority": 2
+    },
+    {
+      "promo_id": "P003",
+      "type": "买赠",
+      "title": "买麦片送酸奶",
+      "description": "购买任意一款麦片类商品，赠送光明如实发酵乳1杯（135g）",
+      "conditions": {
+        "category": "麦片",
+        "gift_product": "光明如实发酵乳135g*1杯",
+        "gift_value": 8.00
+      },
+      "applicable_products": ["SNACK001", "SNACK002", "SNACK003"],
+      "stackable": true,
+      "priority": 1
+    },
+    {
+      "promo_id": "P004",
+      "type": "满减",
+      "title": "火锅食材满99减20",
+      "description": "购买火锅相关食材（锅底、肉类、丸滑、蔬菜），单笔满99元减20元",
+      "conditions": {
+        "keywords": ["火锅", "锅底", "肥牛", "羊肉", "虾滑", "牛肉丸", "娃娃菜", "金针菇", "豆腐"],
+        "min_amount": 99,
+        "discount": 20
+      },
+      "applicable_products": ["COND001", "COND002", "COND003", "MEAT001", "MEAT002", "MEAT003", "MEAT004", "MEAT005", "VEG001", "VEG002", "VEG003"],
+      "stackable": true,
+      "priority": 1
+    },
+    {
+      "promo_id": "P005",
+      "type": "特价",
+      "title": "丹东草莓限时特价",
+      "description": "丹东99草莓限时特价，原价29.9元/盒，特价19.9元/盒",
+      "conditions": {
+        "original_price": 29.90,
+        "special_price": 19.90
+      },
+      "applicable_products": ["FRUIT005"],
+      "stackable": false,
+      "priority": 3
+    },
+    {
+      "promo_id": "P006",
+      "type": "满减",
+      "title": "休闲零食满30减5",
+      "description": "休闲食品品类（坚果、薯片、饼干、果干）满30元减5元",
+      "conditions": {
+        "category": "休闲食品",
+        "min_amount": 30,
+        "discount": 5
+      },
+      "applicable_products": ["SNACK001", "SNACK002", "SNACK003", "SNACK004", "SNACK005", "SNACK006", "SNACK007", "SNACK008", "SNACK009", "SNACK010"],
+      "stackable": true,
+      "priority": 1
+    },
+    {
+      "promo_id": "P007",
+      "type": "第二件半价",
+      "title": "进口水果第二件半价",
+      "description": "进口水果品类第二件半价",
+      "conditions": {
+        "category": "进口水果",
+        "discount_rate_second": 0.5
+      },
+      "applicable_products": ["FRUIT002", "FRUIT004"],
+      "stackable": false,
+      "priority": 2
+    },
+    {
+      "promo_id": "P008",
+      "type": "满减",
+      "title": "啤酒整箱立减15",
+      "description": "啤酒品类整箱购买立减15元",
+      "conditions": {
+        "category": "啤酒",
+        "min_quantity": 1,
+        "unit": "箱",
+        "discount": 15
+      },
+      "applicable_products": ["WINE001"],
+      "stackable": false,
+      "priority": 2
+    },
+    {
+      "promo_id": "P009",
+      "type": "满赠",
+      "title": "母婴品类满300送湿巾",
+      "description": "母婴用品品类单笔满300元，赠送婴儿湿巾1包（80抽）",
+      "conditions": {
+        "category": "母婴用品",
+        "min_amount": 300,
+        "gift_product": "婴儿湿巾80抽*1包",
+        "gift_value": 15.00
+      },
+      "applicable_products": ["BABY001", "BABY002"],
+      "stackable": true,
+      "priority": 1
+    },
+    {
+      "promo_id": "P010",
+      "type": "组合优惠",
+      "title": "火锅套餐组合价",
+      "description": "同时购买海底捞火锅底料+肥牛卷+虾滑，组合价99元（原价111.7元，省12.7元）",
+      "conditions": {
+        "combo_products": ["COND001", "MEAT001", "MEAT004"],
+        "combo_price": 99.00,
+        "original_total": 111.70,
+        "savings": 12.70
+      },
+      "applicable_products": ["COND001", "MEAT001", "MEAT004"],
+      "stackable": false,
+      "priority": 3
+    }
+  ]
+}
