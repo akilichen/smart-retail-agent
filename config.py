@@ -12,6 +12,10 @@ LLM_TEMPERATURE = 0
 OPENAI_API_KEY = os.environ.get("OPENAI_API_KEY")
 OPENAI_BASE_URL = os.environ.get("OPENAI_BASE_URL")
 
+# embedding model config
+OPENAI_GJLD_API_KEY = os.environ.get("OPENAI_GJLD_API_KEY")
+OPENAI_GJLD_BASE_URL = os.environ.get("OPENAI_GJLD_BASE_URL")
+
 # 向量库配置
 CHROMA_PERSIST_DIR = "./knowledge/chroma_db"
 CHROMA_COLLECTION_PRODUCTS = "products"

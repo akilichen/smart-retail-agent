@@ -39,16 +39,16 @@ def validate_products():
         cat = p["category"]
         categories[cat] = categories.get(cat, 0) + 1
 
-    print(f"   品类分布:")
+    print(f"品类分布:")
     for cat, count in sorted(categories.items(), key=lambda x: -x[1]):
-        print(f"     {cat}: {count}个SKU")
+        print(f"{cat}: {count}个SKU")
 
     if errors:
-        print(f"   ❌ 发现 {len(errors)} 个错误:")
+        print(f"❌ 发现 {len(errors)} 个错误:")
         for e in errors:
-            print(f"     - {e}")
+            print(f"- {e}")
     else:
-        print(f"   ✅ 商品数据校验通过")
+        print(f"✅ 商品数据校验通过")
 
     return products, errors
 
@@ -56,29 +56,29 @@ def validate_products():
 def validate_promotions(products):
     """校验促销数据"""
     print("=" * 50)
-    print("🏷️  校验促销数据...")
+    print("🏷️校验促销数据...")
 
     with open("data/promotions.json", "r", encoding="utf-8") as f:
         data = json.load(f)
 
     promos = data["promotions"]
-    print(f"   促销活动总数: {len(promos)}")
+    print(f"促销活动总数: {len(promos)}")
 
     product_ids = {p["product_id"] for p in products}
     errors = []
 
     for promo in promos:
-        print(f"   [{promo['promo_id']}] {promo['type']} - {promo['title']}")
+        print(f"[{promo['promo_id']}] {promo['type']} - {promo['title']}")
         for pid in promo.get("applicable_products", []):
             if pid not in product_ids:
                 errors.append(f"促销 {promo['promo_id']} 引用了不存在的商品: {pid}")
 
     if errors:
-        print(f"   ❌ 发现 {len(errors)} 个错误:")
+        print(f"❌ 发现 {len(errors)} 个错误:")
         for e in errors:
-            print(f"     - {e}")
+            print(f"- {e}")
     else:
-        print(f"   ✅ 促销数据校验通过")
+        print(f"✅ 促销数据校验通过")
 
     return errors
 
@@ -86,20 +86,20 @@ def validate_promotions(products):
 def validate_bundles(products):
     """校验搭配推荐数据"""
     print("=" * 50)
-    print("🎁 校验搭配推荐数据...")
+    print("🎁校验搭配推荐数据...")
 
     with open("data/bundles.json", "r", encoding="utf-8") as f:
         data = json.load(f)
 
     rules = data["rules"]
-    print(f"   搭配规则总数: {len(rules)}")
+    print(f"搭配规则总数: {len(rules)}")
 
     product_ids = {p["product_id"] for p in products}
     errors = []
 
     for rule in rules:
         rec_count = len(rule.get("recommendations", []))
-        print(f"   [{rule['rule_id']}] {rule['trigger_category']} → {rec_count}个推荐")
+        print(f"[{rule['rule_id']}] {rule['trigger_category']} → {rec_count}个推荐")
 
         # 检查trigger_products
         for pid in rule.get("trigger_products", []):
@@ -112,11 +112,11 @@ def validate_bundles(products):
                 errors.append(f"规则 {rule['rule_id']} 的推荐引用了不存在的商品: {rec['product_id']}")
 
     if errors:
-        print(f"   ❌ 发现 {len(errors)} 个错误:")
+        print(f"❌ 发现 {len(errors)} 个错误:")
         for e in errors:
-            print(f"     - {e}")
+            print(f"- {e}")
     else:
-        print(f"   ✅ 搭配推荐数据校验通过")
+        print(f"✅ 搭配推荐数据校验通过")
 
     return errors
 
@@ -124,15 +124,15 @@ def validate_bundles(products):
 def validate_faq():
     """校验FAQ文档"""
     print("=" * 50)
-    print("📚 校验FAQ文档...")
+    print("📚校验FAQ文档...")
 
     faq_dir = "faq"
     if not os.path.exists(faq_dir):
-        print(f"   ❌ FAQ目录不存在: {faq_dir}")
+        print(f"❌ FAQ目录不存在: {faq_dir}")
         return ["FAQ目录不存在"]
 
     md_files = [f for f in os.listdir(faq_dir) if f.endswith(".md")]
-    print(f"   FAQ文档数: {len(md_files)}")
+    print(f"FAQ文档数: {len(md_files)}")
 
     errors = []
     for f in sorted(md_files):
